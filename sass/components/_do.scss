@@ -1,4 +1,9 @@
 .do{
+    @media (max-width: 1199px){
+        display: none;
+    }
+}
+.do{
     padding-bottom: 94px;
     padding-top: 0px;
 &-list{

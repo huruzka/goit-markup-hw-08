@@ -29,11 +29,28 @@ img {
 }
 
 .container {
-  width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
+}
+
+@media screen and (min-width: 480px) {
+  .container {
+    width: 480px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
 }
 
 body {
@@ -73,6 +90,7 @@ body {
 }
 
 header {
+  position: relative;
   border-bottom: 1px solid #EEEEEE;
 }
 
@@ -89,6 +107,54 @@ header {
 
 .nav__logo--style {
   color: #212121;
+}
+
+@media (max-width: 767px) {
+  .menu-mob {
+    display: none;
+  }
+}
+
+.menu-mob {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
+
+.menu-mob:hover, .menu-mob:focus {
+  fill: #2196F3;
+  cursor: pointer;
+}
+
+.menu-mob .menu-cross {
+  display: none;
+}
+
+.menu-mob.is-open .menu-cross {
+  display: block;
+}
+
+.menu-mob.is-open .menu-open {
+  display: none;
+}
+
+.menu-container {
+  display: none;
+  position: absolute;
+  text-align: center;
+  background-color: aqua;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 400px;
+}
+
+.menu-container.is-open {
+  display: block;
 }
 
 .nav {
@@ -568,6 +634,12 @@ header {
   line-height: 1.14;
   text-transform: uppercase;
   color: #212121;
+}
+
+@media (max-width: 1199px) {
+  .do {
+    display: none;
+  }
 }
 
 .do {

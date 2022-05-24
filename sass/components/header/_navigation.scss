@@ -2,6 +2,50 @@
     color: $titels-color;
 }
 
+@media (max-width:767px){
+    .menu-mob{
+    display:none}
+}
+
+.menu-mob{
+    display: inline-flex;
+    margin:0;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+
+&:hover,
+&:focus{
+    fill: $blue-color;
+    cursor: pointer;
+}
+}
+
+.menu-mob .menu-cross{
+    display: none; 
+ }
+.menu-mob.is-open .menu-cross{
+    display: block;
+}
+.menu-mob.is-open .menu-open{
+    display: none;
+}
+
+.menu-container{
+    display: none;
+    position: absolute;
+    text-align: center;
+    background-color: aqua;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 400px;
+
+    &.is-open{
+        display: block;
+    }
+}
+
 .nav{
     display: flex;
     align-items: center;
