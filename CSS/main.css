@@ -731,12 +731,8 @@ header {
   background-color: #F5F4FA;
 }
 
-@media (min-width: 768px) {
-  .team-list {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
+.team-list {
+  margin: -15px;
 }
 
 .team-name, .team-possition {
@@ -762,18 +758,24 @@ header {
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
-}
-
-.team-person:not(:last-child) {
-  margin-bottom: 30px;
+  margin: 30px;
 }
 
 @media (min-width: 768px) {
-  .team-person .team-person {
-    margin-right: 30px;
+  .team-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
-  .team-person:last-child {
-    margin-right: 0px;
+  .team-person {
+    margin: -15px;
+    -ms-flex-preferred-size: calc(100%/2);
+        flex-basis: calc(100%/2);
   }
 }
 
@@ -832,18 +834,7 @@ header {
       -ms-flex-pack: center;
           justify-content: center;
   border-radius: 15px;
-}
-
-.current::after {
-  content: '';
-  width: 48px;
-  height: 4px;
-  background-color: #2196F3;
-  border-radius: 2px;
-}
-
-.client-logo-link:not(:last-child) {
-  margin-right: 30px;
+  margin: -15px;
 }
 
 .client-logo-link {
@@ -856,6 +847,8 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin: 15px;
+  width: calc((100%-4*30px)/2);
   width: 210px;
   height: 92px;
   outline: 1px solid #AFB1B8;
@@ -871,18 +864,17 @@ header {
   cursor: pointer;
 }
 
-@media (min-width: 768px) and (max-width: 1199px) {
+@media (min-width: 768px) {
   .client-logo-link {
+    width: calc((100%-3*30px)/3);
     width: 226px;
   }
 }
 
 @media (min-width: 1200px) {
   .client-logo-link {
+    width: calc((100%-6*30px)/6);
     width: 170px;
-  }
-  .client-logo:not(:last-child) {
-    margin-right: 30px;
   }
 }
 

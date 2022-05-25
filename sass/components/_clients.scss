@@ -6,26 +6,17 @@
         flex-wrap: wrap;
         justify-content: center;
          border-radius: 15px;
+        margin: -15px;
     }
-}
-
-.current::after{
-    content: '';
-    width: 48px;
-    height: 4px;
-
-    background-color: $blue-color;
-    border-radius: 2px;
-}
-
-.client-logo-link:not(:last-child){
-    margin-right: 30px;
 }
 
 .client-logo-link{
     display: flex;
     justify-content: center;
     align-items: center;
+
+    margin: 15px;
+    width: calc((100%-4*30px)/2);
 
     width: 210px;
     height: 92px;
@@ -45,14 +36,13 @@
     }
 }
 
-@media (min-width:$tablet) and (max-width:1199px){
+@media (min-width:$tablet){
     .client-logo-link{
+        width: calc((100%-3*30px)/3);
         width: 226px;}
 }
 @media (min-width:$desktop){
     .client-logo-link{
-    width: 170px;}
-    .client-logo:not(:last-child){
-        margin-right: 30px;
+        width: calc((100%-6*30px)/6);
+        width: 170px;}
     }
-}
