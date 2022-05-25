@@ -1,9 +1,12 @@
 header{
     position: relative;
     border-bottom: 1px solid $border-color;
+
+@media(max-width:767px){
+    height:60px;
+}
 }
 .nav__logo{
-    padding: 24px 0px 25px 0px;
     text-decoration: none;
     font-family: Raleway;
     font-weight: 700;
@@ -11,4 +14,13 @@ header{
     line-height: 1.19;
     letter-spacing: 0.03em;
     color: $blue-color;
+    
+    @media(max-width:767px){
+        position: absolute;
+        left: 15px;
+        top: 16px;}
+
+    @media (min-width:768px){
+        padding: 24px 0px 25px 0px;
+    }
 }

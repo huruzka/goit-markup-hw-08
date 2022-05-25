@@ -3,12 +3,10 @@
     margin-top: 94px;
 &-list{
         display: flex;
-        border-radius: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+         border-radius: 15px;
     }
-}
-
-.nav-link.current{
-    color: $blue-color;
 }
 
 .current::after{
@@ -20,7 +18,7 @@
     border-radius: 2px;
 }
 
-.client-logo:not(:last-child){
+.client-logo-link:not(:last-child){
     margin-right: 30px;
 }
 
@@ -29,7 +27,7 @@
     justify-content: center;
     align-items: center;
 
-    width: 170px;
+    width: 210px;
     height: 92px;
 
     outline: 1px solid $border-color-icon;
@@ -47,3 +45,14 @@
     }
 }
 
+@media (min-width:$tablet) and (max-width:1199px){
+    .client-logo-link{
+        width: 226px;}
+}
+@media (min-width:$desktop){
+    .client-logo-link{
+    width: 170px;}
+    .client-logo:not(:last-child){
+        margin-right: 30px;
+    }
+}

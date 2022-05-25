@@ -94,8 +94,13 @@ header {
   border-bottom: 1px solid #EEEEEE;
 }
 
+@media (max-width: 767px) {
+  header {
+    height: 60px;
+  }
+}
+
 .nav__logo {
-  padding: 24px 0px 25px 0px;
   text-decoration: none;
   font-family: Raleway;
   font-weight: 700;
@@ -103,6 +108,20 @@ header {
   line-height: 1.19;
   letter-spacing: 0.03em;
   color: #2196F3;
+}
+
+@media (max-width: 767px) {
+  .nav__logo {
+    position: absolute;
+    left: 15px;
+    top: 16px;
+  }
+}
+
+@media (min-width: 768px) {
+  .nav__logo {
+    padding: 24px 0px 25px 0px;
+  }
 }
 
 .nav__logo--style {
@@ -116,6 +135,9 @@ header {
 }
 
 .menu-mob {
+  position: absolute;
+  right: 10px;
+  top: 10px;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -177,6 +199,12 @@ header {
   margin-left: 93px;
 }
 
+@media (max-width: 767px) {
+  .nav__list {
+    display: none;
+  }
+}
+
 .nav__list .nav__item + .nav__item {
   margin-left: 50px;
 }
@@ -231,6 +259,12 @@ header {
       -ms-flex-align: center;
           align-items: center;
   margin-left: auto;
+}
+
+@media (max-width: 767px) {
+  .contact {
+    display: none;
+  }
 }
 
 .contact__item + .contact__item {
@@ -289,8 +323,6 @@ header {
 }
 
 .hero__titel {
-  width: 696px;
-  height: 120px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 30px;
@@ -302,6 +334,13 @@ header {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: #ffffff;
+}
+
+@media (min-width: 768px) {
+  .hero__titel {
+    width: 696px;
+    height: 120px;
+  }
 }
 
 .hero__button {
@@ -584,15 +623,17 @@ header {
   padding-top: 94px;
 }
 
-.advantage-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+@media (min-width: 768px) {
+  .advantage-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
 }
 
-.advantage-list .advantage-item {
+.advantage .advantage-list .advantage-item {
   width: 270px;
   margin-right: 30px;
 }
@@ -690,10 +731,12 @@ header {
   background-color: #F5F4FA;
 }
 
-.team-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+@media (min-width: 768px) {
+  .team-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
 .team-name, .team-possition {
@@ -715,15 +758,23 @@ header {
 }
 
 .team-person {
-  margin-right: 30px;
   background-color: #ffffff;
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
 
-.team-person:last-child {
-  margin-right: 0px;
+.team-person:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+@media (min-width: 768px) {
+  .team-person .team-person {
+    margin-right: 30px;
+  }
+  .team-person:last-child {
+    margin-right: 0px;
+  }
 }
 
 .sociallinks {
@@ -775,11 +826,12 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   border-radius: 15px;
-}
-
-.nav-link.current {
-  color: #2196F3;
 }
 
 .current::after {
@@ -790,7 +842,7 @@ header {
   border-radius: 2px;
 }
 
-.client-logo:not(:last-child) {
+.client-logo-link:not(:last-child) {
   margin-right: 30px;
 }
 
@@ -804,7 +856,7 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 170px;
+  width: 210px;
   height: 92px;
   outline: 1px solid #AFB1B8;
   border-radius: 3px;
@@ -817,6 +869,21 @@ header {
   fill: #2196F3;
   outline-color: #2196F3;
   cursor: pointer;
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .client-logo-link {
+    width: 226px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .client-logo-link {
+    width: 170px;
+  }
+  .client-logo:not(:last-child) {
+    margin-right: 30px;
+  }
 }
 
 .filters-list {
