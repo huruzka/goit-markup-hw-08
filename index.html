@@ -15,7 +15,6 @@
 <header>
     <div class="container">
         <!--Навигация-->
-    <nav class="nav">
         <a class="nav__logo" href="WebStudio" lang="en">Web<span class="nav__logo--style">Studio</span></a>
         <button 
         type="button" 
@@ -29,14 +28,17 @@
             <use class="menu-open" href="./images/symbol-defs (3).svg#menu_40px"></use>
             </svg>
         </button>
-        <div class="menu-container is-open" id="menu-container" data-menu>menu</div>
+        <div class="menu-container is-open" id="menu-container" data-menu>
+            <div class="syte_nav">
         <ul class="nav__list">
           <li class="nav__item" ><a class="nav__link nav__link--current" href="">Студия</a></li>
           <li class="nav__item" ><a class="nav__link" href="./portfolio.html">Портфолио</a></li>
           <li class="nav__item" ><a class="nav__link" href="">Контакты</a></li>
         </ul>
+    </div>
     <!--Контакты-->
-    <ul class="contact">
+    <div class="contact">
+    <ul>
         <li class="contact__item">
                 <a class="email" href="mailto:info@devstudio.com">
                 <svg class="email__icon" width="16px"  height="12px">
@@ -51,7 +53,8 @@
                 </a>
         </li>
     </ul>
-</nav>
+</div>
+</div>
 </div>
 </header>
 <!--Главная секция-->

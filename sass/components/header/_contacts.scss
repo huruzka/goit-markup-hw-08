@@ -1,15 +1,3 @@
-.contact{
-    
-    @media (max-width:767px){
-        display: none;
-    }
-    display: flex;
-    align-items: center;
-    margin-left: auto;
-&__item + &__item{
-        margin-left: 50px;
-    }
-}
 
 .email:hover,
 .email:focus{
